@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  *  *print_alphabet_x10 - 10 times Alphabet in lowercase
@@ -21,4 +21,4 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		a++;
 	}
-}
+}}
