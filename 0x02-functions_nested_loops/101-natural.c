@@ -2,33 +2,30 @@
 #include <stdio.h>
 
 /**
- *  * main - prints all possible different combinations of three digits
- *   * Return: Always 0 (Success)
+ *  * main - computes and prints the sum of all the multiples
+ *   *  * of 3 or 5 below 1024
+ *    * Return: Always 0 (Success)
+ *     *
  */
 int main(void)
 {
-	int n, m, l;
-
-	for (n = 48; n < 58; n++)
+	unsigned long int sum3, sum5, sum;
+	int i;
+	sum3 = 0;
+	sum5 = 0;
+	sum = 0;
+	for (i = 0; i < 1024; ++i)
 	{
-		for (m = 49; m < 58; m++)
+		if ((i % 3) == 0)
 		{
-			for (l = 50; l < 58; l++)
-			{
-				if (l > m && m > n)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
+			sum3 = sum3 + i;
+		}
+		else if ((i % 5) == 0)
+		{
+			sum5 = sum5 + i;
 		}
 	}
-	putchar('\n');
+	sum = sum3 + sum5;
+	printf("%lu\n", sum);
 	return (0);
-}}
+}
