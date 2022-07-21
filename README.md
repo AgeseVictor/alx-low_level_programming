@@ -1,1 +1,1 @@
-Pointer be so easy
+Grace is poured on my lips and hands.
